@@ -38,7 +38,7 @@ class PopupViewConfig extends PopupViewConfig_parent
             return $moduleSettingBridge->get($setting, 'agpopup');
         }else{
             $config = \OxidEsales\Eshop\Core\Registry::getConfig();
-            $config->getShopConfVar($setting, null, 'agpopup');
+            return $config->getShopConfVar($setting, null, 'module:agpopup');
         }
     }
 }

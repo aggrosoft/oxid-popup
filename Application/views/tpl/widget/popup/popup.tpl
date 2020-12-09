@@ -1,4 +1,4 @@
-[{if $oViewConf->showPopup()}]=>[{$oViewConf->getPopupCmsIdent()}]
+[{if $oViewConf->showPopup()}]
     [{oxifcontent ident=$oViewConf->getPopupCmsIdent() object=oContent}]
         <div id="agpopup-modal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog modal-dialog-centered" role="document">
