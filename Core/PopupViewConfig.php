@@ -9,7 +9,7 @@ class PopupViewConfig extends PopupViewConfig_parent
 {
     public function showPopup ()
     {
-        if ($_COOKIE['agpopupshown'] === 1) {
+        if ($_COOKIE['agpopupshown']) {
             return false;
         }
 
