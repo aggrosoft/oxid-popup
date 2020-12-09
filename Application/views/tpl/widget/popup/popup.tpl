@@ -1,6 +1,6 @@
 [{if $oViewConf->showPopup()}]
     [{oxifcontent ident=$oViewConf->getPopupCmsIdent() assign=oContent}]
-    <div class="modal" tabindex="-1" role="dialog">
+    <div id="agpopup-modal" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -18,5 +18,18 @@
             </div>
         </div>
     </div>
+    [{capture assign=pageScript}]
+        $(function(){
+            $('#agpopup-modal').on('hidden.bs.modal', function (e) {
+                var days = [{$oViewConf->getPopupCookieLifetime()}];
+                var date = new Date();
+                date.setTime(date.getTime()+(days*24*60*60*1000));
+                var expires = "; expires="+date.toGMTString();
+
+                document.cookie = "agpopupshown=1"+expires+"; path=/;";
+            });
+            $('#agpopup-modal').modal('show');
+        });
+    [{/capture}]
     [{/oxifcontent}]
 [{/if}]
