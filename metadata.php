@@ -7,10 +7,10 @@ $aModule = array(
     'title'        => 'Popup',
     'description'  => 'Show a popup when a user visits your page',
     'thumbnail'    => '',
-    'version'      => '1.0.1',
+    'version'      => '1.0.2',
     'author'       => 'Aggrosoft GmbH',
     'extend'      => array(
-        \OxidEsales\Eshop\Core\ViewConfig::class => Aggrosoft\Popup\Core\ViewConfig::class,
+        \OxidEsales\Eshop\Core\ViewConfig::class => Aggrosoft\Popup\Core\PopupViewConfig::class,
     ),
     'settings' => array(
         array('group' => 'agpopup_settings', 'name' => 'iCookieLifetime',  'type' => 'str',   'value' => '1'),
