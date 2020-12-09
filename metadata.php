@@ -10,7 +10,7 @@ $aModule = array(
     'version'      => '1.0.1',
     'author'       => 'Aggrosoft GmbH',
     'extend'      => array(
-        \OxidEsales\Eshop\Application\Core\ViewConfig::class => Aggrosoft\Popup\Core\ViewConfig::class,
+        \OxidEsales\Eshop\Core\ViewConfig::class => Aggrosoft\Popup\Core\ViewConfig::class,
     ),
     'settings' => array(
         array('group' => 'agpopup_settings', 'name' => 'iCookieLifetime',  'type' => 'str',   'value' => '1'),
