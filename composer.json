@@ -1,0 +1,24 @@
+{
+  "name": "aggrosoft/oxid-popup",
+  "description": "Show a popup when users visit your page",
+  "type": "oxideshop-module",
+  "keywords": ["oxid", "modules", "eShop", "popup"],
+  "homepage": "https://github.com/aggrosoft/oxid-popup",
+  "license": "MIT",
+  "extra": {
+    "oxideshop": {
+      "blacklist-filter": [
+        "documentation/**/*.*"
+      ],
+      "target-directory": "agpopup"
+    }
+  },
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aggrosoft\\Popup\\": "../../../source/modules/agpopup"
+    }
+  }
+}
